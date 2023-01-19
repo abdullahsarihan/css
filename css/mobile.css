@@ -1,0 +1,17 @@
+#navbar {
+    flex-direction: column;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    overflow: hidden; /*taşmayı engeller*/
+    height: 80px;
+}
+
+#training .items {
+    flex-direction: column; /*dikey sıralama*/
+}
+#training .items .item { 
+    width: 100%; /*%33 yerine alt alta sıralanınca tüm blogu kaplasın*/
+}
+.courses .course {
+    flex-direction: column;
+}

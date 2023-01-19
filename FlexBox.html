@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS - FlexBox</title>
+
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            .container{
+                width: 75%;
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap; /*kutu sığmayınca aşağıdan başlatma*/
+                /* justify-content: flex-start; */ /*yatay konumlandırma row için, flex-direction: column deyince tam tersine dönüyor*/
+                justify-content: flex-start;
+                /* align-items: center; */ /*dikey konumlandırma row için, flex-direction: column deyince tam tersine dönüyor*/
+                /* flex-direction: row; */ /*default olarak gelen row*/
+                flex-direction: row; /*yukardan aşağı sıralama 
+                min-height: 600px; /*min 600 taşarsa 600 ün üzerine çıkabilirsin*/
+                background-color: black;
+                /* align-items: center; */
+                min-height: 600px;
+            }
+            .box{
+                text-align: center;
+                background-color: #f2f2f2;
+                width: 200px;
+                height: 100px;
+                border: 1px solid black;
+                margin: 10px;
+            }
+            .box-1 {
+                /* order: 3; */
+                background: red;
+                /* flex-grow: 1;  *//* flex grow 1+2+3=100% 1 2 3 oranında yerleştirir.*/
+            }
+            .box-2 {
+                /* order: 1; */
+                align-self: flex-start;
+                background: blue;
+                /* flex-grow: 2; */
+                /* flex-grow: 1; */
+                flex: 1;
+            }
+            .box-3 {
+                /* order: 2; */
+                background: green;
+                /* flex-grow: 3; */
+                flex: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <div class="box box-1">
+            <h1>Article 1</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box box-2">
+            <h1>Article 2</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box box-3">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <!-- <div class="box">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div> -->
+    </div>
+    </body>
+</html>
